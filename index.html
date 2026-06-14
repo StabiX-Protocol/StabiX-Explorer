@@ -1,9 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StabiX Explorer</title>
+
+<style>
+body{
+margin:0;
+background:#020617;
+font-family:Arial,sans-serif;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.box{
+width:90%;
+max-width:600px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+input{
+width:100%;
+padding:16px;
+border-radius:12px;
+border:1px solid #1e293b;
+background:#0f172a;
+color:white;
+font-size:16px;
+box-sizing:border-box;
+}
+
+button{
+width:100%;
+margin-top:12px;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#2563eb;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.card{
+margin-top:20px;
+background:#0f172a;
+padding:20px;
+border-radius:16px;
+display:none;
+}
+
+.row{
+margin:10px 0;
+}
+
+.label{
+color:#94a3b8;
+font-size:14px;
+}
+
+.value{
+font-size:16px;
+font-weight:600;
+}
+</style>
 </head>
+
 <body>
+
+<div class="box">
+
 <h1>StabiX Explorer</h1>
+
+<input
+id="strInput"
+placeholder="Enter STR ID">
+
+<button onclick="searchSTR()">
+VERIFY
+</button>
+
+<div id="result" class="card">
+
+<div class="row">
+<div class="label">STR ID</div>
+<div id="rStr" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Status</div>
+<div id="rStatus" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Type</div>
+<div id="rType" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Mode</div>
+<div id="rMode" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Asset</div>
+<div id="rAsset" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Amount</div>
+<div id="rAmount" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Network</div>
+<div id="rNetwork" class="value">-</div>
+</div>
+
+<div class="row">
+<div class="label">Date</div>
+<div id="rDate" class="value">-</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function searchSTR(){
+alert("Firestore binding next step");
+}
+</script>
+
 </body>
 </html>
