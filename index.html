@@ -1,145 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StabiX Explorer</title>
 
-<style>
-body{
-margin:0;
-background:#020617;
-font-family:Arial,sans-serif;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-}
-
-.box{
-width:90%;
-max-width:600px;
-}
-
-h1{
-text-align:center;
-margin-bottom:30px;
-}
-
-input{
-width:100%;
-padding:16px;
-border-radius:12px;
-border:1px solid #1e293b;
-background:#0f172a;
-color:white;
-font-size:16px;
-box-sizing:border-box;
-}
-
-button{
-width:100%;
-margin-top:12px;
-padding:16px;
-border:none;
-border-radius:12px;
-background:#2563eb;
-color:white;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.card{
-margin-top:20px;
-background:#0f172a;
-padding:20px;
-border-radius:16px;
-display:none;
-}
-
-.row{
-margin:10px 0;
-}
-
-.label{
-color:#94a3b8;
-font-size:14px;
-}
-
-.value{
-font-size:16px;
-font-weight:600;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<h1>StabiX Explorer</h1>
+    <h1 class="title">
+        StabiX Explorer
+    </h1>
 
-<input
-id="strInput"
-placeholder="Enter STR ID">
+    <div class="searchBox">
 
-<button onclick="searchSTR()">
-VERIFY
-</button>
+        <input
+            type="text"
+            id="strInput"
+            placeholder="Enter STR ID">
 
-<div id="result" class="card">
+        <button id="verifyBtn">
+            VERIFY
+        </button>
 
-<div class="row">
-<div class="label">STR ID</div>
-<div id="rStr" class="value">-</div>
+    </div>
+
+    <div id="resultCard" class="resultCard">
+
+        <div class="row">
+            <span>STR ID</span>
+            <span id="rStr">-</span>
+        </div>
+
+        <div class="row">
+            <span>Status</span>
+            <span id="rStatus">-</span>
+        </div>
+
+        <div class="row">
+            <span>Type</span>
+            <span id="rType">-</span>
+        </div>
+
+        <div class="row">
+            <span>Mode</span>
+            <span id="rMode">-</span>
+        </div>
+
+        <div class="row">
+            <span>Asset</span>
+            <span id="rAsset">-</span>
+        </div>
+
+        <div class="row">
+            <span>Amount</span>
+            <span id="rAmount">-</span>
+        </div>
+
+        <div class="row">
+            <span>Network</span>
+            <span id="rNetwork">-</span>
+        </div>
+
+        <div class="row">
+            <span>Date</span>
+            <span id="rDate">-</span>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="row">
-<div class="label">Status</div>
-<div id="rStatus" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Type</div>
-<div id="rType" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Mode</div>
-<div id="rMode" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Asset</div>
-<div id="rAsset" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Amount</div>
-<div id="rAmount" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Network</div>
-<div id="rNetwork" class="value">-</div>
-</div>
-
-<div class="row">
-<div class="label">Date</div>
-<div id="rDate" class="value">-</div>
-</div>
-
-</div>
-
-</div>
-
-<script>
-function searchSTR(){
-alert("Firestore binding next step");
-}
-</script>
+<script src="js/explorer.js"></script>
 
 </body>
 </html>
