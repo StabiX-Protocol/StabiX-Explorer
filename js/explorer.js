@@ -37,7 +37,7 @@ window.verifySTR = async () => {
 
   const snap = await getDocs(q);
 
-  const card = document.getElementById("result");
+  const card = document.getElementById("resultCard")
 
   if(snap.empty){
     card.style.display = "block";
