@@ -91,12 +91,12 @@ window.verifySTR = async () => {
 </div>
 
 <div class="row">
-  <div class="label">Wallet ID</div>
+  <div class="label">From</div>
   <div class="value">${tx.userId || "-"}</div>
 </div>
 
 <div class="row">
-  <div class="label">Counterparty</div>
+  <div class="label">To</div>
   <div class="value">${tx.counterparty || "-"}</div>
 </div>
   `;
