@@ -49,9 +49,23 @@ window.verifySTR = async () => {
   }
 
   const tx = snap.docs[0].data();
-  const dateText =
-  tx.createdAt?.toDate().toLocaleString() || "-";
+  
+  let dateText = "-";
+try {
+  if (tx.createdAt && tx.createdAt.toDate) {
+    dateText = tx.createdAt.toDate().toLocaleString();
+  } else if (tx.createdAt?.seconds) {
+    dateText = new Date(
+      tx.createdAt.seconds * 1000
+    ).toLocaleString();
+  } else {
+    dateText = String(tx.createdAt || "-");
+  }
+} catch(e) {
+  dateText = "-";
+}
 
+  
   card.style.display = "block";
 
   card.innerHTML = `
@@ -82,7 +96,7 @@ window.verifySTR = async () => {
 
     <div class="row">
   <div class="label">Date</div>
-  <div class="value">${dateText}</div>
+  <div class="value">${JSON.stringify(tx.createdAt)}</div>
 </div>
   `;
 };
