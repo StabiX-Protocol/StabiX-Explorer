@@ -49,6 +49,8 @@ window.verifySTR = async () => {
   }
 
   const tx = snap.docs[0].data();
+  const dateText =
+  tx.createdAt?.toDate().toLocaleString() || "-";
 
   card.style.display = "block";
 
