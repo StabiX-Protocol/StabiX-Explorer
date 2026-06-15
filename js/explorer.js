@@ -79,3 +79,4 @@ window.verifySTR = async () => {
     </div>
   `;
 };
+document.getElementById("verifyBtn").onclick = window.verifySTR;
