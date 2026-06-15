@@ -89,6 +89,16 @@ window.verifySTR = async () => {
   <div class="label">Date</div>
   <div class="value">${dateText}</div>
 </div>
+
+<div class="row">
+  <div class="label">Wallet ID</div>
+  <div class="value">${tx.userId || "-"}</div>
+</div>
+
+<div class="row">
+  <div class="label">Counterparty</div>
+  <div class="value">${tx.counterparty || "-"}</div>
+</div>
   `;
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
