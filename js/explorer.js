@@ -83,3 +83,4 @@ window.verifySTR = async () => {
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
 document.getElementById("verifyBtn").addEventListener("click", window.verifySTR);
+document.getElementById("rDate").textContent = dateText;
