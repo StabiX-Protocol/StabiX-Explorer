@@ -79,8 +79,12 @@ window.verifySTR = async () => {
       <div class="label">Mode</div>
       <div class="value">${tx.mode || "Instant"}</div>
     </div>
+
+    <div class="row">
+  <div class="label">Date</div>
+  <div class="value">${dateText}</div>
+</div>
   `;
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
 document.getElementById("verifyBtn").addEventListener("click", window.verifySTR);
-document.getElementById("rDate").textContent = dateText;
