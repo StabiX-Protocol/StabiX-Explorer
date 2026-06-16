@@ -90,6 +90,12 @@ window.verifySTR = async () => {
   <div class="value">${dateText}</div>
 </div>
 
+${(tx.type === "deposit" || tx.type === "withdraw") ? `
+<div class="row">
+  <div class="label">Wallet Address</div>
+  <div class="value">${tx.eoa || "-"}</div>
+</div>
+` : `
 <div class="row">
   <div class="label">From</div>
   <div class="value">${tx.userId || "-"}</div>
@@ -99,6 +105,7 @@ window.verifySTR = async () => {
   <div class="label">To</div>
   <div class="value">${tx.counterparty || "-"}</div>
 </div>
+`}
   `;
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
