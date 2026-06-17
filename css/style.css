@@ -100,10 +100,10 @@ gap:12px;
 }
 
 .row .value{
-max-width:60%;
-word-break:break-all;
-overflow-wrap:break-word;
-text-align:right;
+  max-width:60%;
+  word-break:normal;
+  overflow-wrap:anywhere;
+  text-align:right;
 }
 
 .row:last-child{
