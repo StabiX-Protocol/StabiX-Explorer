@@ -93,9 +93,17 @@ padding:20px;
 .row{
 display:flex;
 justify-content:space-between;
-align-items:center;
+align-items:flex-start;
 padding:12px 0;
 border-bottom:1px solid var(--border);
+gap:12px;
+}
+
+.row .value{
+max-width:60%;
+word-break:break-all;
+overflow-wrap:break-word;
+text-align:right;
 }
 
 .row:last-child{
@@ -135,10 +143,4 @@ text-align:left;
 }
 }
 
-.address{
-  width:100%;
-  word-break:break-all;
-  overflow-wrap:anywhere;
-  white-space:normal;
-}
 
