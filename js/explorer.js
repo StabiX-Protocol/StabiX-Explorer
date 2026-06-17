@@ -93,7 +93,7 @@ window.verifySTR = async () => {
 ${tx.type === "deposit" ? `
 <div class="row">
   <div class="label">From</div>
-  <div class="value">${tx.eoa || "-"}</div>
+  <div class="value address">${tx.eoa || "-"}</div>
 </div>
 
 <div class="row">
@@ -108,7 +108,7 @@ ${tx.type === "deposit" ? `
 
 <div class="row">
   <div class="label">To</div>
-  <div class="value">${tx.eoa || "-"}</div>
+  <div class="value address">${tx.eoa || "-"}</div>
 </div>
 ` : `
 <div class="row">
