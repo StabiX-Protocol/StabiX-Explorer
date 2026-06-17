@@ -133,5 +133,12 @@ gap:6px;
 .row span:last-child{
 text-align:left;
 }
-
 }
+
+.address{
+  width:100%;
+  word-break:break-all;
+  overflow-wrap:anywhere;
+  white-space:normal;
+}
+
