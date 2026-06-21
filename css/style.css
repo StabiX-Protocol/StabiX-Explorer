@@ -170,8 +170,8 @@ text-align:left;
 
 .liveSection{
   margin-top: 40px;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .liveSection h2{
@@ -184,39 +184,37 @@ text-align:left;
 .liveTxList{
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 0;
 }
 
 .liveTxItem{
-  background: var(--card-bg, rgba(255,255,255,0.04));
-  border: 1px solid var(--card-border, rgba(255,255,255,0.06));
-  padding: 16px;
-  border-radius: 14px;
-}
-
-.liveTxTop{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--card-border, rgba(255,255,255,0.08));
+  background: transparent;
 }
 
 .liveSTR{
   color: var(--accent-color, #4da3ff);
   font-weight: 700;
+  font-size: 14px;
 }
 
-.liveType{
+.liveTime{
+  color: var(--text-secondary, #7f8aa3);
+  font-size: 13px;
+}
+
+.liveAsset{
   color: var(--text-primary, #ffffff);
   font-size: 14px;
+  font-weight: 500;
 }
 
 .liveAmount{
   color: var(--success-color, #22c55e);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-}
-
-.liveAsset{
-  color: var(--text-secondary, #7f8aa3);
-  font-size: 13px;
 }
