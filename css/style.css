@@ -281,3 +281,48 @@ text-align:left;
 .volumeCard h3{
   color: #22c55e;
 }
+
+.gasSection{
+  margin-top: 40px;
+}
+
+.gasSection h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 18px;
+}
+
+.gasGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.gasCard{
+  background: var(--card-bg, rgba(255,255,255,0.04));
+  border: 1px solid var(--card-border, rgba(255,255,255,0.12));
+  padding: 22px 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.gasCard h3{
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-color, #4da3ff);
+  margin-bottom: 8px;
+}
+
+.gasCard p{
+  font-size: 14px;
+  color: var(--text-secondary, #7f8aa3);
+}
+
+.gasNote{
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-secondary, #7f8aa3);
+  text-align: center;
+}
