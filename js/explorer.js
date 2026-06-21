@@ -47,6 +47,7 @@ window.verifySTR = async () => {
       <div class="value">Transaction Not Found</div>
     `;
     return;
+    document.getElementById("resultCard").style.display = "block";
   }
 
   const tx = snap.docs[0].data();
