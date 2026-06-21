@@ -163,21 +163,27 @@ async function loadLiveTransactions(){
       const tx = doc.data();
 
       html += `
-        <div class="liveTxItem">
-          <div class="liveTxTop">
-            <span class="liveSTR">${tx.str}</span>
-            <span class="liveType">${tx.type}</span>
-          </div>
+<div class="liveTxItem">
+  <span class="liveSTR">
+    ${tx.str.slice(0,8)}***${tx.str.slice(-4)}
+  </span>
 
-          <div class="liveAmount">
-            ${tx.amount || "-"}
-          </div>
+  <span class="liveTime">
+    ${new Date(tx.createdAt?.toDate()).toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit"
+    })}
+  </span>
 
-          <div class="liveAsset">
-            ${tx.asset || "USDC"}
-          </div>
-        </div>
-      `;
+  <span class="liveAsset">
+    ${tx.asset}
+  </span>
+
+  <span class="liveAmount">
+    ${tx.amount}
+  </span>
+</div>
+`;
     });
 
     document.getElementById("liveTxList").innerHTML = html;
