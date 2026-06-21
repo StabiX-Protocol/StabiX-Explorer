@@ -216,3 +216,26 @@ async function loadOverview(){
 }
 
 loadOverview();
+
+async function loadGasSaved(){
+
+  const txRef = collection(db, "transactions");
+
+  onSnapshot(txRef, (snapshot)=>{
+
+    const totalTx = snapshot.size;
+
+    const ethSaved = (totalTx * 1.20).toFixed(2);
+    const evmSaved = (totalTx * 0.08).toFixed(2);
+    const tronSaved = (totalTx * 0.30).toFixed(2);
+
+    document.getElementById("stabixGas").innerText = "$0";
+    document.getElementById("ethGas").innerText = "$" + ethSaved;
+    document.getElementById("evmGas").innerText = "$" + evmSaved;
+    document.getElementById("tronGas").innerText = "$" + tronSaved;
+
+  });
+
+}
+
+loadGasSaved();
