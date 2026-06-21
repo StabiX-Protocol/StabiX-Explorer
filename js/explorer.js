@@ -165,7 +165,7 @@ async function loadLiveTransactions(){
       html += `
         <div class="liveTxItem">
           <div class="liveTxTop">
-            <span class="liveSTR">${tx.strId}</span>
+            <span class="liveSTR">${tx.str}</span>
             <span class="liveType">${tx.type}</span>
           </div>
 
