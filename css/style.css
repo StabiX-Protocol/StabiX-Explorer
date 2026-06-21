@@ -225,3 +225,42 @@ text-align:left;
   text-align:right;
   margin-left:auto;
 }
+
+.overviewSection{
+  margin-top: 40px;
+}
+
+.overviewSection h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary, #ffffff);
+  margin-bottom: 18px;
+}
+
+.overviewGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.overviewCard{
+  background: var(--card-bg, rgba(255,255,255,0.04));
+  border: 1px solid var(--card-border, rgba(255,255,255,0.12));
+  padding: 24px 18px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.overviewCard h3{
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--accent-color, #4da3ff);
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.overviewCard p{
+  font-size: 14px;
+  color: var(--text-secondary, #7f8aa3);
+}
