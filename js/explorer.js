@@ -165,7 +165,7 @@ async function loadLiveTransactions(){
       html += `
 <div class="liveTxItem">
   <span class="liveSTR">
-    ${tx.str.slice(0,8)}***${tx.str.slice(-4)}
+    ${tx.str.slice(0,3)}***${tx.str.slice(-4)}
   </span>
 
   <span class="liveTime">
