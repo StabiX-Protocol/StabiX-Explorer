@@ -170,6 +170,8 @@ text-align:left;
 
 .liveSection{
   margin-top: 40px;
+  display:flex;
+  flex-direction:column;
 }
 
 .liveSection h2{
