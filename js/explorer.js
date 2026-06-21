@@ -5,7 +5,10 @@ import {
   collection,
   query,
   where,
-  getDocs
+  getDocs,
+  orderBy,
+  onSnapshot,
+  limit
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -141,10 +144,17 @@ async function loadLiveTransactions(){
 
   const txRef = query(
     collection(db, "transactions"),
-    orderBy("createdAt", "desc")
+    orderBy("createdAt", "desc"),
+    limit(5)
   );
 
   onSnapshot(txRef, (snapshot)=>{
+
+    if(snapshot.empty){
+  document.getElementById("liveTxList").innerHTML =
+    `<div class="liveTxItem">No live transactions yet.</div>`;
+  return;
+    }
 
     let html = "";
 
