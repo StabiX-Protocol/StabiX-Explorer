@@ -117,3 +117,54 @@ text-align:left;
 }
 
 }
+
+.liveSection{
+  margin-top: 40px;
+}
+
+.liveSection h2{
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.liveTxList{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.liveTxItem{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.liveTxTop{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.liveSTR{
+  color: #4da3ff;
+  font-weight: 700;
+}
+
+.liveType{
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.liveAmount{
+  color: #9fd8a3;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.liveAsset{
+  color: #7f8aa3;
+  font-size: 13px;
+}
