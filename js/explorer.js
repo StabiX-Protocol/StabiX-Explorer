@@ -81,3 +81,44 @@ window.verifySTR = async () => {
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
 document.getElementById("verifyBtn").addEventListener("click", window.verifySTR);
+
+async function loadLiveTransactions(){
+
+  const txRef = query(
+    collection(db, "transactions"),
+    orderBy("createdAt", "desc")
+  );
+
+  onSnapshot(txRef, (snapshot)=>{
+
+    let html = "";
+
+    snapshot.forEach((doc)=>{
+
+      const tx = doc.data();
+
+      html += `
+        <div class="liveTxItem">
+          <div class="liveTxTop">
+            <span class="liveSTR">${tx.strId}</span>
+            <span class="liveType">${tx.type}</span>
+          </div>
+
+          <div class="liveAmount">
+            ${tx.amount || "-"}
+          </div>
+
+          <div class="liveAsset">
+            ${tx.asset || "USDC"}
+          </div>
+        </div>
+      `;
+    });
+
+    document.getElementById("liveTxList").innerHTML = html;
+
+  });
+
+}
+
+loadLiveTransactions();
