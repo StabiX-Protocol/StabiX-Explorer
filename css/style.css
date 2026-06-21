@@ -188,33 +188,40 @@ text-align:left;
 }
 
 .liveTxItem{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--card-border, rgba(255,255,255,0.08));
-  background: transparent;
+  display:flex;
+  align-items:center;
+  padding:14px 0;
+  border-bottom:1px solid var(--card-border, rgba(255,255,255,0.08));
+  background:transparent;
+  gap:20px;
 }
 
 .liveSTR{
   color: var(--accent-color, #4da3ff);
-  font-weight: 700;
-  font-size: 14px;
+  font-weight:700;
+  font-size:14px;
+  width:120px;
 }
 
 .liveTime{
   color: var(--text-secondary, #7f8aa3);
-  font-size: 13px;
+  font-size:13px;
+  width:60px;
 }
 
 .liveAsset{
   color: var(--text-primary, #ffffff);
-  font-size: 14px;
-  font-weight: 500;
+  font-size:14px;
+  font-weight:500;
+  width:60px;
+  text-align:center;
 }
 
 .liveAmount{
   color: var(--success-color, #22c55e);
-  font-size: 15px;
-  font-weight: 600;
+  font-size:15px;
+  font-weight:600;
+  width:40px;
+  text-align:right;
+  margin-left:auto;
 }
