@@ -209,7 +209,7 @@ async function loadOverview(){
     });
 
     document.getElementById("totalTx").innerText = totalTx;
-    document.getElementById("totalVolume").innerText = "$" + totalVolume;
+    document.getElementById("totalVolume").innerText =  "$" + totalVolume.toFixed(2);
 
   });
 
