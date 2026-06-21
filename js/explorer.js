@@ -22,7 +22,7 @@ const db = getFirestore(app);
 
 function showSTRInfo(){
   alert(
-    "STR (StabiX Transaction Record) is the unique proof ID assigned to every deposit, withdrawal, and internal transfer in StabiX. Use it to verify your transaction details."
+    "STR (StabiX Transaction Record) is the unique proof ID assigned to every transaction including deposit,withdraw,sent and receive in StabiX. Use it to verify your transaction details."
   );
 }
 
