@@ -20,6 +20,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+function showSTRInfo(){
+  alert(
+    "STR (StabiX Transaction Record) is the unique proof ID assigned to every deposit, withdrawal, and internal transfer in StabiX. Use it to verify your transaction details."
+  );
+}
+
 window.verifySTR = async () => {
 
   const str = document
