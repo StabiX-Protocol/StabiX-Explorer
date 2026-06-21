@@ -20,11 +20,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-function showSTRInfo(){
-  alert(
-    "STR (StabiX Transaction Record) is the unique proof ID assigned to every transaction including deposit,withdraw,sent and receive in StabiX. Use it to verify your transaction details."
-  );
-}
 
 window.verifySTR = async () => {
 
@@ -133,3 +128,10 @@ ${tx.type === "deposit" ? `
 };
 document.getElementById("verifyBtn").onclick = window.verifySTR;
 document.getElementById("verifyBtn").addEventListener("click", window.verifySTR);
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("strInfo").addEventListener("click", () => {
+    alert(
+    "STR (StabiX Transaction Record) is the unique proof ID assigned to every transaction including deposit,withdraw,sent and receive in StabiX. Use it to verify your transaction details."
+  );
+  });
+});
