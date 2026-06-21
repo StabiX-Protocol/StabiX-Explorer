@@ -193,3 +193,26 @@ async function loadLiveTransactions(){
 }
 
 loadLiveTransactions();
+
+async function loadOverview(){
+
+  const txRef = collection(db, "transactions");
+
+  onSnapshot(txRef, (snapshot)=>{
+
+    let totalTx = snapshot.size;
+    let totalVolume = 0;
+
+    snapshot.forEach((doc)=>{
+      const tx = doc.data();
+      totalVolume += Number(tx.amount || 0);
+    });
+
+    document.getElementById("totalTx").innerText = totalTx;
+    document.getElementById("totalVolume").innerText = "$" + totalVolume;
+
+  });
+
+}
+
+loadOverview();
