@@ -91,19 +91,19 @@ padding:20px;
 }
 
 .row{
-display:flex;
-justify-content:space-between;
-align-items:flex-start;
-padding:12px 0;
-border-bottom:1px solid var(--border);
-gap:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:12px 0;
+  border-bottom:1px solid var(--border);
+  gap:6px;
 }
 
 .row .value{
-  max-width:60%;
-  word-break:normal;
+  width:100%;
+  text-align:left;
   overflow-wrap:anywhere;
-  text-align:right;
+  word-break:break-word;
 }
 
 .row:last-child{
