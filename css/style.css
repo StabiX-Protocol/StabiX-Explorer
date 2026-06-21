@@ -168,7 +168,7 @@ text-align:left;
 .liveSection h2{
   font-size: 20px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary, #ffffff);
   margin-bottom: 18px;
 }
 
@@ -179,8 +179,8 @@ text-align:left;
 }
 
 .liveTxItem{
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--card-bg, rgba(255,255,255,0.04));
+  border: 1px solid var(--card-border, rgba(255,255,255,0.06));
   padding: 16px;
   border-radius: 14px;
 }
@@ -192,22 +192,22 @@ text-align:left;
 }
 
 .liveSTR{
-  color: #4da3ff;
+  color: var(--accent-color, #4da3ff);
   font-weight: 700;
 }
 
 .liveType{
-  color: #ffffff;
+  color: var(--text-primary, #ffffff);
   font-size: 14px;
 }
 
 .liveAmount{
-  color: #9fd8a3;
+  color: var(--success-color, #22c55e);
   font-size: 16px;
   font-weight: 600;
 }
 
 .liveAsset{
-  color: #7f8aa3;
+  color: var(--text-secondary, #7f8aa3);
   font-size: 13px;
 }
