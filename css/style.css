@@ -146,15 +146,17 @@ text-align:left;
 }
 
 .strHint{
-  margin-top: 14px;
-  font-size: 14px;
-  color: var(--text-secondary, #5f6b85);
+  margin: 22px 0 18px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #d8e1ff;
   text-align: center;
+  line-height: 1.5;
 }
 
 .strLink{
-  color: var(--accent-color, #2563eb);
-  font-weight: 600;
+  color: #4da3ff;
+  font-weight: 700;
   cursor: pointer;
+  text-decoration: underline;
 }
-
