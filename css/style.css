@@ -30,10 +30,12 @@ body{
 }
 
 .container{
-width:100%;
-max-width:700px;
-margin:0 auto;
-padding:80px 20px;
+  width:100%;
+  max-width:640px;
+  margin:auto;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
 }
 
 .title{
@@ -82,12 +84,17 @@ opacity:.95;
 }
 
 .resultCard{
-display:none;
-margin-top:24px;
-background: var(--card);
-border:1px solid var(--border);
-border-radius:16px;
-padding:20px;
+  display:none;
+  margin-top:24px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  width:100%;
+  min-height:auto;
+  height:auto;
+  overflow:visible;
+  position:relative;
 }
 
 .row{
