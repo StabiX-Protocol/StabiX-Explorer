@@ -321,8 +321,9 @@ text-align:left;
 
 .gasNote{
   margin-top: 18px;
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.8;
   color: var(--text-secondary, #7f8aa3);
-  text-align: center;
+  text-align: left;
+  padding: 0 4px;
 }
