@@ -116,10 +116,12 @@ font-size:14px;
 }
 
 .row span:last-child{
-color:var(--text);
-font-weight:600;
-text-align:right;
-word-break:break-word;
+  color:var(--text);
+  font-weight:600;
+  text-align:left;
+  width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-all;
 }
 
 @media(max-width:600px){
