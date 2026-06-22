@@ -27,8 +27,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const rtdb = getDatabase(app);
+
+const db = window.db || getFirestore(app);
+const rtdb = window.rtdb || getDatabase(app);
 
 
 window.verifySTR = async () => {
