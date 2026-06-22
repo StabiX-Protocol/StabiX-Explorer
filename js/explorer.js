@@ -221,7 +221,7 @@ async function loadGasSaved(){
     const stats = snapshot.val() || {};
     const totalTx = stats.totalTx || 0;
 
-    document.getElementById("stabixGas").innerText = "$0.00";
+    document.getElementById("stabixGas").innerText = "$0";
     document.getElementById("ethGas").innerText =
     "$" + (totalTx * 1.20).toFixed(2);
 
