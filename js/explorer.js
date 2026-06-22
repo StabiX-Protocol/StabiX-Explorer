@@ -11,6 +11,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
 
 import {
+  getDatabase,
   ref,
   onValue
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
