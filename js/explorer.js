@@ -223,16 +223,25 @@ async function loadGasSaved(){
 
     document.getElementById("stabixGas").innerText = "$0";
     document.getElementById("ethGas").innerText =
-    "$" + (totalTx * 1.20).toFixed(2);
+    "$" + formatGas(totalTx * 1.20)
 
     document.getElementById("evmGas").innerText =
-    "$" + (totalTx * 0.08).toFixed(2);
+    "$" + formatGas(totalTx * 0.08)
 
     document.getElementById("tronGas").innerText =
-    "$" + (totalTx * 0.30).toFixed(2);
+    "$" + formatGas(totalTx * 0.30)
 
   });
 
+}
+function formatGas(num){
+  if(num >= 1000000){
+    return (num / 1000000).toFixed(2) + "M";
+  }
+  if(num >= 1000){
+    return (num / 1000).toFixed(2) + "K";
+  }
+  return Math.round(num);
 }
 
 loadGasSaved();
