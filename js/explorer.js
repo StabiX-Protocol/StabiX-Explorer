@@ -23,7 +23,7 @@ const firebaseConfig = {
   projectId: "stabix-backend-v1",
   storageBucket: "stabix-backend-v1.firebasestorage.app",
   messagingSenderId: "351361221507",
-  appId: "1:351361221507:web:ebaf0d15e86d4b184c6cb6"
+  appId: "1:351361221507:web:ebaf0d15e86d4b184c6cb6",
   databaseURL: "https://stabix-backend-v1-default-rtdb.firebaseio.com"
 };
 
