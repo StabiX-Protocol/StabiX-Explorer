@@ -7,9 +7,13 @@ import {
   where,
   getDocs,
   orderBy,
-  onSnapshot,
   limit
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+import {
+  ref,
+  onValue
+} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBNs4efcfPoHYk13cU8xuCdnTHOXL1yzT4",
@@ -22,6 +26,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const rtdb = getDatabase(app);
 
 
 window.verifySTR = async () => {
@@ -142,25 +147,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function loadLiveTransactions(){
 
-  const txRef = query(
-    collection(db, "transactions"),
-    orderBy("createdAt", "desc"),
-    limit(5)
-  );
+  const liveRef = ref(rtdb, "liveFeed");
 
-  onSnapshot(txRef, (snapshot)=>{
+  onValue(liveRef, (snapshot)=>{
 
-    if(snapshot.empty){
-  document.getElementById("liveTxList").innerHTML =
-    `<div class="liveTxItem">No live transactions yet.</div>`;
-  return;
+    const data = snapshot.val();
+
+    if(!data){
+      document.getElementById("liveTxList").innerHTML =
+      `<div class="liveTxItem">No live transactions yet.</div>`;
+      return;
     }
 
     let html = "";
 
-    snapshot.forEach((doc)=>{
-
-      const tx = doc.data();
+    Object.values(data).reverse().forEach((tx)=>{
 
       html += `
 <div class="liveTxItem">
@@ -169,10 +170,7 @@ async function loadLiveTransactions(){
   </span>
 
   <span class="liveTime">
-    ${new Date(tx.createdAt?.toDate()).toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit"
-    })}
+    ${tx.time}
   </span>
 
   <span class="liveAsset">
@@ -191,8 +189,7 @@ async function loadLiveTransactions(){
   });
 
 }
-
-loadLiveTransactions();
+loadLiveTransactions()
 
 async function loadOverview(){
 
@@ -219,20 +216,22 @@ loadOverview();
 
 async function loadGasSaved(){
 
-  const txRef = collection(db, "transactions");
+  const statsRef = ref(rtdb, "stats");
 
-  onSnapshot(txRef, (snapshot)=>{
+  onValue(statsRef, (snapshot)=>{
 
-    const totalTx = snapshot.size;
-
-    const ethSaved = (totalTx * 1.20).toFixed(2);
-    const evmSaved = (totalTx * 0.08).toFixed(2);
-    const tronSaved = (totalTx * 0.30).toFixed(2);
+    const stats = snapshot.val() || {};
+    const totalTx = stats.totalTx || 0;
 
     document.getElementById("stabixGas").innerText = "$0";
-    document.getElementById("ethGas").innerText = "$" + ethSaved;
-    document.getElementById("evmGas").innerText = "$" + evmSaved;
-    document.getElementById("tronGas").innerText = "$" + tronSaved;
+    document.getElementById("ethGas").innerText =
+      "$" + (totalTx * 1.20).toFixed(2);
+
+    document.getElementById("evmGas").innerText =
+      "$" + (totalTx * 0.08).toFixed(2);
+
+    document.getElementById("tronGas").innerText =
+      "$" + (totalTx * 0.30).toFixed(2);
 
   });
 
