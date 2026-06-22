@@ -221,15 +221,15 @@ async function loadGasSaved(){
     const stats = snapshot.val() || {};
     const totalTx = stats.totalTx || 0;
 
-    document.getElementById("stabixGas").innerText = "$0";
+    document.getElementById("stabixGas").innerText = "$0.00";
     document.getElementById("ethGas").innerText =
-      "$" + (totalTx * 1.20).toFixed(2);
+    "$" + (totalTx * 1.20).toFixed(2);
 
     document.getElementById("evmGas").innerText =
-      "$" + (totalTx * 0.08).toFixed(2);
+    "$" + (totalTx * 0.08).toFixed(2);
 
     document.getElementById("tronGas").innerText =
-      "$" + (totalTx * 0.30).toFixed(2);
+    "$" + (totalTx * 0.30).toFixed(2);
 
   });
 
