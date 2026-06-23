@@ -164,7 +164,10 @@ async function loadLiveTransactions(){
 
     let html = "";
 
-    Object.values(data).reverse().forEach((tx)=>{
+    Object.values(data)
+  .reverse()
+  .slice(0, 5)
+  .forEach((tx)=>{
 
       html += `
 <div class="liveTxItem">
