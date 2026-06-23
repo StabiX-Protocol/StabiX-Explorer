@@ -156,7 +156,7 @@ text-align:left;
   margin: 22px 0 18px;
   font-size: 18px;
   font-weight: 500;
-  color: #d8e1ff;
+  color: var(--text);
   text-align: center;
   line-height: 1.5;
 }
@@ -177,7 +177,7 @@ text-align:left;
 .liveSection h2{
   font-size: 20px;
   font-weight: 700;
-  color: var(--text-primary, #ffffff);
+  color: var(--text);
   margin-bottom: 18px;
 }
 
@@ -191,7 +191,7 @@ text-align:left;
   display:flex;
   align-items:center;
   padding:14px 0;
-  border-bottom:1px solid var(--card-border, rgba(255,255,255,0.08));
+  border-bottom:1px solid var(--border);
   background:transparent;
   gap:20px;
 }
@@ -204,13 +204,13 @@ text-align:left;
 }
 
 .liveTime{
-  color: var(--text-secondary, #7f8aa3);
+  color: var(--label);
   font-size:13px;
   width:60px;
 }
 
 .liveAsset{
-  color: var(--text-primary, #ffffff);
+  color: var(--text);
   font-size:14px;
   font-weight:500;
   width:60px;
@@ -233,7 +233,7 @@ text-align:left;
 .overviewSection h2{
   font-size: 20px;
   font-weight: 700;
-  color: var(--text-primary, #ffffff);
+  color: var(--text);
   margin-bottom: 18px;
 }
 
@@ -244,8 +244,8 @@ text-align:left;
 }
 
 .overviewCard{
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.08);
+  background: var(--card);
+  border: 1px solid var(--border);
   padding: 28px 20px;
   border-radius: 18px;
   text-align: center;
@@ -272,7 +272,7 @@ text-align:left;
 
 .overviewCard p{
   font-size: 16px;
-  color: var(--text-secondary, #7f8aa3);
+  color: var(--label);
   line-height: 1.4;
   text-align: center;
   margin: 0;
@@ -289,7 +289,7 @@ text-align:left;
 .gasSection h2{
   font-size: 20px;
   font-weight: 700;
-  color: var(--text-primary, #ffffff);
+  color: var(--text);
   margin-bottom: 18px;
 }
 
@@ -300,8 +300,8 @@ text-align:left;
 }
 
 .gasCard{
-  background: var(--card-bg, rgba(255,255,255,0.04));
-  border: 1px solid var(--card-border, rgba(255,255,255,0.12));
+  background: var(--card);
+  border: 1px solid var(--border);
   padding: 22px 18px;
   border-radius: 16px;
   text-align: center;
@@ -350,14 +350,14 @@ text-align:left;
 
 .gasCard p{
   font-size: 14px;
-  color: var(--text-secondary, #7f8aa3);
+  color: var(--label);
 }
 
 .gasNote{
   margin-top: 18px;
   font-size: 14px;
   line-height: 1.8;
-  color: var(--text-secondary, #7f8aa3);
+  color: var(--label);
   text-align: left;
   padding: 0 4px;
 }
