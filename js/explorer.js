@@ -96,7 +96,7 @@ window.verifySTR = async () => {
     ${(tx.type === "deposit" || tx.type === "withdraw") ? `
 <div class="row">
   <div class="label">Mode</div>
-  <div class="value">${tx.mode || "Instant"}</div>
+<div class="value">${tx.mode || "-"}</div>
 </div>
 ` : ``}
 
